@@ -3,13 +3,10 @@
     modules = [
       self.nixosModules.hostMain
       self.nixosModules.niri
-      self.nixosModules.swaylock
     ];
   };
 
   flake.nixosModules.hostMain = { pkgs, lib, ... }: {
-    imports = [];
-
     environment.systemPackages = with pkgs; [
       glib
       perl
