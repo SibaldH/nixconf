@@ -43,10 +43,11 @@
         };
 
         binds = {
-          "Mod+Return" = _: { props.hotkey-overlay-title = "Open a Terminal: ${pkgs.alacritty.pname}"; content.spawn = lib.getExe pkgs.alacritty; };
+          "Mod+Return" = _: { props.hotkey-overlay-title = "Open a Terminal: ${self'.packages.kitty.pname}"; content.spawn = lib.getExe self'.packages.kitty; };
           "Mod+Shift+Slash" = _: { content.show-hotkey-overlay = _: {}; };
           "Mod+Space" = _: { props.hotkey-overlay-title = "Open Launcher"; content.spawn-sh = "${lib.getExe self'.packages.noctalia} ipc call launcher toggle"; };
           "Mod+Shift+Q" = _: { props.hotkey-overlay-title = "Lock screen"; content.spawn-sh = "${lib.getExe self'.packages.noctalia} ipc call lockScreen lock"; };
+          "Mod+E" = _: { props.hotkey-overlay-title = "Open Yazi"; content.spawn = [ "${lib.getExe self'.packages.kitty}" "--hold" "${lib.getExe self'.packages.yazi}" ]; };
 
           "Mod+Q" = _: { content.close-window = _: {}; };
           "Mod+F" = _: { content.maximize-column = _: {}; };
