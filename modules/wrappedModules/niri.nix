@@ -46,15 +46,15 @@
           "Mod+Return" = _: { props.hotkey-overlay-title = "Open a Terminal: ${self'.packages.kitty.pname}"; content.spawn = lib.getExe self'.packages.kitty; };
           "Mod+Shift+Slash" = _: { content.show-hotkey-overlay = _: {}; };
           "Mod+Space" = _: { props.hotkey-overlay-title = "Open Launcher"; content.spawn-sh = "${lib.getExe self'.packages.noctalia} ipc call launcher toggle"; };
-          "Mod+Shift+Q" = _: { props.hotkey-overlay-title = "Lock screen"; content.spawn-sh = "${lib.getExe self'.packages.noctalia} ipc call lockScreen lock"; };
           "Mod+E" = _: { props.hotkey-overlay-title = "Open Yazi"; content.spawn = [ "${lib.getExe self'.packages.kitty}" "--hold" "${lib.getExe self'.packages.yazi}" ]; };
 
+          "Mod+Shift+Q" = _: { props.hotkey-overlay-title = "Lock screen"; content.spawn-sh = "${lib.getExe self'.packages.noctalia} ipc call lockScreen lock"; };
           "Mod+Q" = _: { content.close-window = _: {}; };
           "Mod+F" = _: { content.maximize-column = _: {}; };
           "Mod+G" = _: { content.fullscreen-window = _: {}; };
           "Mod+Shift+F" = _: { content.toggle-window-floating = _: {}; };
           "Mod+C" = _: { content.center-column = _: {}; };
-          "Mod+E" = _: { content.quit = _: {}; };
+          "Mod+Shift+E" = _: { content.quit = _: {}; };
           "Mod+O" = _: { props.repeat = false; content.toggle-overview = _: {}; };
           "Mod+W" = _: { content.toggle-column-tabbed-display = _: {}; };
 
