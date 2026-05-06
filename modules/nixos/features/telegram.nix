@@ -1,11 +1,12 @@
 {
   flake.nixosModules.librewolf = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
-      librewolf
+      telegram-desktop
     ];
 
     preferences.keymap = {
-      "SUPER + d"."l".package = pkgs.librewolf;
+      "SUPER + d"."t".package = pkgs.telegram-desktop;
     };
   };
 }
+
