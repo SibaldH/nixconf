@@ -9,7 +9,10 @@
   perSystem = { pkgs, lib, self', config, ... }: {
     packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
-      settings = {
+      settings = 
+        let
+          noctaliaExe = lib.getExe self'.packages.noctalia;
+        in {
         spawn-at-startup = [
           (lib.getExe self'.packages.noctalia)
         ];
@@ -45,10 +48,10 @@
         binds = {
           "Mod+Return" = _: { props.hotkey-overlay-title = "Open a Terminal: ${self'.packages.kitty.pname}"; content.spawn = lib.getExe self'.packages.kitty; };
           "Mod+Shift+Slash" = _: { content.show-hotkey-overlay = _: {}; };
-          "Mod+Space" = _: { props.hotkey-overlay-title = "Open Launcher"; content.spawn-sh = "${lib.getExe self'.packages.noctalia} ipc call launcher toggle"; };
+          "Mod+Space" = _: { props.hotkey-overlay-title = "Open Launcher"; content.spawn-sh = "${noctaliaExe} ipc call launcher toggle"; };
           "Mod+E" = _: { props.hotkey-overlay-title = "Open Yazi"; content.spawn = [ "${lib.getExe self'.packages.kitty}" "--hold" "${lib.getExe self'.packages.yazi}" ]; };
 
-          "Mod+Shift+Q" = _: { props.hotkey-overlay-title = "Lock screen"; content.spawn-sh = "${lib.getExe self'.packages.noctalia} ipc call lockScreen lock"; };
+          "Mod+Shift+Q" = _: { props.hotkey-overlay-title = "Lock screen"; content.spawn-sh = "${noctaliaExe} ipc call lockScreen lock"; };
           "Mod+Q" = _: { content.close-window = _: {}; };
           "Mod+F" = _: { content.maximize-column = _: {}; };
           "Mod+G" = _: { content.fullscreen-window = _: {}; };
