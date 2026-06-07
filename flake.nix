@@ -11,7 +11,6 @@
     };
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
-    wrappers.url = "github:lassulus/wrappers";
   };
 
   outputs = 
