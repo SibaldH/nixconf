@@ -2,7 +2,7 @@
   perSystem = { pkgs, ... }: {
     packages.kitty = inputs.wrapper-modules.wrappers.kitty.wrap {
       inherit pkgs;
-      extraPackages = with pkgs; [ jetbrains-mono ];
+      runtimePkgs = with pkgs; [ jetbrains-mono ];
       settings = {
         enable_audio_bell = "no";
 
