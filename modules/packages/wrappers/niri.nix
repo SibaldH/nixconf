@@ -1,13 +1,4 @@
-{ self, inputs, moduleWithSystem, ... }: {
-  flake.nixosModules.niri = moduleWithSystem (
-    { self', ... }: {
-      programs.niri = {
-        enable = true;
-        package = self'.packages.niri;
-      };
-    }
-  );
-
+{ self, inputs, ... }: {
   perSystem = { pkgs, lib, self', config, ... }: {
     packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
