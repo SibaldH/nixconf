@@ -1,13 +1,25 @@
 # modules/hosts/desktop.nix
-{ self, inputs, withSystem, ... }: {
+{
+  self,
+  inputs,
+  withSystem,
+  ...
+}:
+{
   flake.nixosConfigurations.laptop =
     let
       system = "x86_64-linux";
     in
-    withSystem system ({ self', inputs', ... }:
+    withSystem system (
+      { self', inputs', ... }:
       inputs.nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit inputs inputs' self self';
+          inherit
+            inputs
+            inputs'
+            self
+            self'
+            ;
         };
 
         modules = [
@@ -20,5 +32,6 @@
             nixpkgs.hostPlatform = "${system}";
           }
         ];
-      });
+      }
+    );
 }

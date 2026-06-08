@@ -1,15 +1,18 @@
-{ self, inputs, ... }: {
-  perSystem = { pkgs, ... }: {
-    packages.kitty = inputs.wrapper-modules.wrappers.kitty.wrap {
-      inherit pkgs;
-      runtimePkgs = with pkgs; [ jetbrains-mono ];
-      settings = {
-        enable_audio_bell = "no";
+{ self, inputs, ... }:
+{
+  perSystem =
+    { pkgs, ... }:
+    {
+      packages.kitty = inputs.wrapper-modules.wrappers.kitty.wrap {
+        inherit pkgs;
+        runtimePkgs = with pkgs; [ jetbrains-mono ];
+        settings = {
+          enable_audio_bell = "no";
 
-        font_family = "JetBrainsMono Nerd Font";
+          font_family = "JetBrainsMono Nerd Font";
 
-        background_opacity = 0.50;
+          background_opacity = 0.50;
+        };
       };
     };
-  };
 }

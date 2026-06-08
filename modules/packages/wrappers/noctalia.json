@@ -190,34 +190,17 @@
     "clockStyle": "custom",
     "clockFormat": "ddd, MMM dd HH:mm:ss ",
     "passwordChars": true,
-    "lockScreenMonitors": [
-      "eDP-1"
-    ],
+    "lockScreenMonitors": ["eDP-1"],
     "lockScreenBlur": 0.4,
     "lockScreenTint": 0.4,
     "keybinds": {
-      "keyUp": [
-        "Up"
-      ],
-      "keyDown": [
-        "Down"
-      ],
-      "keyLeft": [
-        "Left"
-      ],
-      "keyRight": [
-        "Right"
-      ],
-      "keyEnter": [
-        "Return",
-        "Enter"
-      ],
-      "keyEscape": [
-        "Esc"
-      ],
-      "keyRemove": [
-        "Del"
-      ]
+      "keyUp": ["Up"],
+      "keyDown": ["Down"],
+      "keyLeft": ["Left"],
+      "keyRight": ["Right"],
+      "keyEnter": ["Return", "Enter"],
+      "keyEscape": ["Esc"],
+      "keyRemove": ["Del"]
     },
     "reverseScroll": false,
     "smoothScrollEnabled": true
@@ -541,9 +524,7 @@
     "enabled": true,
     "enableMarkdown": false,
     "density": "default",
-    "monitors": [
-      "eDP-1"
-    ],
+    "monitors": ["eDP-1"],
     "location": "top_right",
     "overlayLayer": true,
     "backgroundOpacity": 0.5,
@@ -576,11 +557,7 @@
     "autoHideMs": 2000,
     "overlayLayer": true,
     "backgroundOpacity": 1,
-    "enabledTypes": [
-      0,
-      1,
-      2
-    ],
+    "enabledTypes": [0, 1, 2],
     "monitors": []
   },
   "audio": {

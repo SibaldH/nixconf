@@ -1,6 +1,8 @@
-{self, moduleWithSystem, ... }: {
+{ self, moduleWithSystem, ... }:
+{
   flake.nixosModules.niri = moduleWithSystem (
-    { self', ... }: {
+    { self', ... }:
+    {
       programs.niri = {
         enable = true;
         package = self'.packages.niri;
