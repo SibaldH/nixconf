@@ -6,32 +6,24 @@
   ...
 }:
 {
-  flake.nixosConfigurations.laptop =
-    let
-      system = "x86_64-linux";
-    in
-    withSystem system (
-      { self', inputs', ... }:
-      inputs.nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit
-            inputs
-            inputs'
-            self
-            self'
-            ;
-        };
+  flake.nixosConfigurations.laptop = withSystem "x86_64-linux" (
+    { self', inputs', ... }:
+    inputs.nixpkgs.lib.nixosSystem {
+      specialArgs = {
+        inherit
+          inputs
+          inputs'
+          self
+          self'
+          ;
+      };
 
-        modules = [
-          self.nixosModules.profile-workstation
+      modules = [
+        self.nixosModules.profile-workstation
 
-          ../../hosts/laptop/hardware.nix
-
-          {
-            networking.hostName = "laptop";
-            nixpkgs.hostPlatform = "${system}";
-          }
-        ];
-      }
-    );
+        ./_laptop/hardware.nix
+        ./_laptop/configuration.nix
+      ];
+    }
+  );
 }
