@@ -14,9 +14,9 @@
       environment.systemPackages = [
         self'.packages.kitty
         self'.packages.yazi
-        self'.packages.neovim
-        self'.packages.nushell
-        self'.packages.tmux
+        # self'.packages.neovim
+        # self'.packages.nushell
+        # self'.packages.tmux
       ];
     }
   );

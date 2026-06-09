@@ -1,9 +1,13 @@
+{ self, ... }:
 {
   flake.nixosModules.profile-minimal =
-    { pkgs, ... }:
+    { pkgs, self, ... }:
     {
       imports = [
-        # base modules can be added here through self.nixosModules if needed
+        # base modules
+        self.nixosModules.locales
+        self.nixosModules.network
+        self.nixosModules.nix
       ];
 
       environment.systemPackages = with pkgs; [
