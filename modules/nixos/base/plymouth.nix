@@ -1,7 +1,7 @@
 { self, ... }:
 
 {
-  flake.nixosModules.plymouth =
+  flake.nixosModules.base-plymouth =
     {
       config,
       pkgs,

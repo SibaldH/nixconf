@@ -1,7 +1,7 @@
 { self, ... }:
 
 {
-  flake.nixosModules.users = { pkgs, user, ... }: {
+  flake.nixosModules.base-users = { pkgs, user, ... }: {
     users = {
       users.${user} = {
         isNormalUser = true;

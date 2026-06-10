@@ -1,7 +1,7 @@
 { self, ... }:
 
 {
-  flake.nixosModules.locales = { pkgs, lib, ... }: {
+  flake.nixosModules.base-locales = { pkgs, lib, ... }: {
     i18n = {
       defaultLocale = "en_US.UTF-8";
       extraLocaleSettings = {

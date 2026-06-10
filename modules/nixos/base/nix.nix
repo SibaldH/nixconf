@@ -3,7 +3,7 @@
   ...
 }:
 {
-  flake.nixosModules.nix =
+  flake.nixosModules.base-nix =
     {
       pkgs,
       lib,

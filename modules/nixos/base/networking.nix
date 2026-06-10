@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.network =
+  flake.nixosModules.base-network =
     {
       pkgs,
       lib,

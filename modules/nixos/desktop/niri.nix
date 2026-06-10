@@ -1,6 +1,6 @@
 { self, moduleWithSystem, ... }:
 {
-  flake.nixosModules.niri = moduleWithSystem (
+  flake.nixosModules.desktop-niri = moduleWithSystem (
     { self', ... }:
     {
       programs.niri = {

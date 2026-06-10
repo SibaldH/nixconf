@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.xdg =
+  flake.nixosModules.desktop-xdg =
     {
       pkgs,
       ...

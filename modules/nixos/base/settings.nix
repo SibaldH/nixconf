@@ -1,7 +1,7 @@
 { self, ... }:
 
 {
-  flake.nixosModules.settings =
+  flake.nixosModules.base-settings =
     { lib, ... }:
     {
       options.nixconf = {

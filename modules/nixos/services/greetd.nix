@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.greetd =
+  flake.nixosModules.services-greetd =
     {
       pkgs,
       config,
