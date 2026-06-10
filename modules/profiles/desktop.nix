@@ -14,6 +14,9 @@
         self.nixosModules.desktop-fonts
         self.nixosModules.desktop-niri
         self.nixosModules.desktop-xdg
+
+        # services
+        self.nixosModules.services-greetd
       ];
 
       environment.systemPackages = with pkgs; [
