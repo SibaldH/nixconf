@@ -9,5 +9,11 @@
     loader.efi.canTouchEfiVariables = true;
   };
 
-  networking.hostName = "laptop";
+  nixconf = {
+    user = "jay";
+    fullName = "Sibald Hulsemlans";
+    email = "sibald.hulselmans@protonmail.com";
+    hostName = "laptop";
+  };
+
 }

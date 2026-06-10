@@ -8,6 +8,7 @@
     }:
     {
       networking = {
+        hostName = config.nixconf.hostName;
         networkmanager.enable = true;
         networkmanager.unmanaged = [ "wlp15s0" ];
         firewall.allowedTCPPorts = [
