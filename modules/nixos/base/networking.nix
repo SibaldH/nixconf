@@ -17,5 +17,6 @@
           67
         ];
       };
+      users.users.${config.nixconf.user}.extraGroups = [ "networkmanager" ];
     };
 }
