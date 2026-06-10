@@ -9,6 +9,8 @@
     loader.efi.canTouchEfiVariables = true;
   };
 
+  services.qemuGuest.enable = true;
+
   nixconf = {
     user = "jay";
     fullName = "Sibald Hulsemlans";
