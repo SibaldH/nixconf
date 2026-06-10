@@ -100,14 +100,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1780915332,
-        "narHash": "sha256-h0XXFvNUosEd7WfPeBTs3t0GMkhwnUnWp+AzNTCvTXs=",
-        "path": "/home/jay/code/nix-wrapper-modules",
-        "type": "path"
+        "lastModified": 1780915325,
+        "narHash": "sha256-rgLzBNUh5TakHdAPMjXwAfEo+vrr4nQgcDJ2ehrYa3A=",
+        "owner": "SibaldH",
+        "repo": "nix-wrapper-modules",
+        "rev": "e38ce70ebb339f281a35a5a6bed1f127d55bc362",
+        "type": "github"
       },
       "original": {
-        "path": "/home/jay/code/nix-wrapper-modules",
-        "type": "path"
+        "owner": "SibaldH",
+        "ref": "feat/zed-wrapper",
+        "repo": "nix-wrapper-modules",
+        "type": "github"
       }
     }
   },

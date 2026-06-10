@@ -12,7 +12,7 @@
 
     # wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
     wrapper-modules = {
-      url = "path:/home/jay/code/nix-wrapper-modules";
+      url = "github:SibaldH/nix-wrapper-modules/feat/zed-wrapper";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
