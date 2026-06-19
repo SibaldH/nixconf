@@ -2,7 +2,7 @@
 
 {
   flake.nixosModules.profile-workstation = moduleWithSystem (
-    { self', ... }:
+    { self', pkgs, ... }:
 
     { ... }:
 
@@ -17,6 +17,10 @@
         # self'.packages.neovim
         # self'.packages.nushell
         # self'.packages.tmux
+
+        pkgs.vlc
+        pkgs.libreoffice
+        pkgs.signal-desktop
       ];
     }
   );
