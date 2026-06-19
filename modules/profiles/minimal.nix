@@ -4,13 +4,16 @@
     { pkgs, self, ... }:
     {
       imports = [
-        # base modules
+        ## base modules
         self.nixosModules.base-locales
         self.nixosModules.base-network
         self.nixosModules.base-nix
         # self.nixosModules.base-plymouth
         self.nixosModules.base-settings
         self.nixosModules.base-users
+
+        ## services
+        self.nixosModules.services-openssh
       ];
 
       environment.systemPackages = with pkgs; [
