@@ -1,5 +1,6 @@
-{ self, ... }: {
-  flake.nixosModules.services-greetd =
+{ self, moduleWithSystem, ... }: {
+  flake.nixosModules.services-greetd = moduleWithSystem (
+    { self', ... }:
     {
       pkgs,
       config,
@@ -9,9 +10,10 @@
       services.greetd = {
         enable = true;
         settings.default_session = {
-          command = "${config.programs.niri.package}/bin/niri-session";
+          command = "${self'.packages.niri}/bin/niri-session";
           user = "${config.nixconf.user}";
         };
       };
-    };
+    }
+  );
 }
