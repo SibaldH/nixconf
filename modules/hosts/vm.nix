@@ -18,7 +18,7 @@
       };
 
       modules = [
-        self.nixosModules.profile-desktop
+        self.nixosModules.profile-workstation
 
         ./_vm/hardware.nix
         ./_vm/configuration.nix
