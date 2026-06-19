@@ -2,7 +2,7 @@
 
 {
   flake.nixosModules.profile-desktop =
-    { }:
+    { ... }:
     {
       imports = [
         self.nixosModules.profile-cli
