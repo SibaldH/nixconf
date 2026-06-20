@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.hardware-bluetooth =
+  flake.nixosModules.base-bluetooth =
     {
       pkgs,
       config,

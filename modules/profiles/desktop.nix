@@ -8,7 +8,6 @@
         self.nixosModules.profile-cli
 
         self.nixosModules.hardware-audio
-        self.nixosModules.hardware-bluetooth
         self.nixosModules.hardware-graphics
 
         self.nixosModules.desktop-fonts
