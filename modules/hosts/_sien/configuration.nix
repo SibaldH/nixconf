@@ -13,6 +13,6 @@
     user = "sien";
     fullName = "Sibald Hulsemlans";
     email = "sibald.hulselmans@protonmail.com";
-    hostName = "homeserver";
+    hostName = "sien";
   };
 }
