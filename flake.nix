@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    disko = {
+        url = "github:nix-community/disko";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
     wrapper-modules = {
       url = "github:SibaldH/nix-wrapper-modules/feat/zed-wrapper";
