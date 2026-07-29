@@ -5,7 +5,7 @@
   ...
 }:
 {
-  flake.nixosConfigurations.vm = withSystem "x86_64-linux" (
+  flake.nixosConfigurations.sien = withSystem "x86_64-linux" (
     { self', inputs', ... }:
     inputs.nixpkgs.lib.nixosSystem {
       specialArgs = {
@@ -18,7 +18,7 @@
       };
 
       modules = [
-        self.nixosModules.profile-workstation
+        self.nixosModules.profile-desktop
         inputs.disko.nixosModules.disko
 
         ./_sien/hardware.nix
