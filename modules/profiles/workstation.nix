@@ -21,6 +21,8 @@
         pkgs.vlc
         pkgs.libreoffice
         pkgs.signal-desktop
+        pkgs.librewolf
+        pkgs.ferdium
       ];
     }
   );
