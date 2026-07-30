@@ -11,8 +11,8 @@
     };
 
     disko = {
-        url = "github:nix-community/disko";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";

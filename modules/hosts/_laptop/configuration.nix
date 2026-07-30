@@ -4,7 +4,8 @@
 
     loader.systemd-boot.enable = true;
     loader.efi.efiSysMountPoint = "/boot";
-    loader.efi.canTouchEfiVariables = true; };
+    loader.efi.canTouchEfiVariables = true;
+  };
 
   nixconf = {
     user = "jay";
