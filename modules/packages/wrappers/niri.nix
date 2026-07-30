@@ -24,6 +24,39 @@
 
             prefer-no-csd = _: { };
 
+            outputs = {
+              "eDP-1" = {
+                mode = "2880x1920@120.000";
+                scale = 2.0;
+                position = _: {
+                  props = {
+                    x = 0;
+                    y = 0;
+                  };
+                };
+              };
+              "Philips Consumer Electronics Company 27M1C5500V AU02337004359" = {
+                mode = "2560x1440@119.998";
+                scale = 1.0;
+                position = _: {
+                  props = {
+                    x = 4000;
+                    y = 0;
+                  };
+                };
+              };
+              "Philips Consumer Electronics Company 27M1C5500V AU02337004363" = {
+                mode = "2560x1440@119.998";
+                scale = 1.0;
+                position = _: {
+                  props = {
+                    x = 1440;
+                    y = 0;
+                  };
+                };
+              };
+            };
+
             input = {
               focus-follows-mouse = _: { };
               warp-mouse-to-focus = _: { };
