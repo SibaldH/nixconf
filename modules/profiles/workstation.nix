@@ -17,6 +17,7 @@
         # self'.packages.neovim
         # self'.packages.nushell
         # self'.packages.tmux
+	self'.packages.stremio
 
         pkgs.vlc
         pkgs.libreoffice
