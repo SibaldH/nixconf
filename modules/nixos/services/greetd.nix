@@ -9,8 +9,8 @@
       services.greetd = {
         enable = true;
         settings.default_session = {
-          command = "${config.programs.niri.package}/bin/niri-session";
-          user = "${config.nixconf.user}";
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --cmd ${config.programs.niri.package}/bin/niri-session";
+	  user = "${config.nixconf.user}";
         };
       };
     };
