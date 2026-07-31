@@ -17,6 +17,7 @@
             "input"
             "dialout"
             "adbusers"
+	    "ydotool"
           ];
           initialPassword = "root";
         };
