@@ -2,14 +2,19 @@
 
 {
   flake.nixosModules.profile-workstation = moduleWithSystem (
-    { self', pkgs, ... }:
+    { self', ... }:
 
-    { ... }:
+    { pkgs, lib, ... }:
 
     {
       imports = [
         self.nixosModules.profile-desktop
       ];
+
+      nixpkgs.config.allowUnfreePredicate = pkg:
+        builtins.elem (lib.getName pkg) [
+          "spotify"
+        ];
 
       environment.systemPackages = [
         self'.packages.kitty
@@ -24,6 +29,7 @@
         pkgs.signal-desktop
         pkgs.librewolf
         pkgs.ferdium
+        pkgs.spotify
       ];
     }
   );
