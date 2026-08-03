@@ -22,7 +22,7 @@
         # self'.packages.neovim
         # self'.packages.nushell
         # self'.packages.tmux
-	self'.packages.stremio
+        self'.packages.stremio
 
         pkgs.vlc
         pkgs.libreoffice
