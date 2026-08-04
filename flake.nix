@@ -15,9 +15,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
     wrapper-modules = {
-      url = "github:SibaldH/nix-wrapper-modules/feat/zed-wrapper";
+      url = "github:BirdeeHub/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
