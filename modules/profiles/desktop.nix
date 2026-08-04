@@ -16,6 +16,7 @@
 
         # services
         self.nixosModules.services-greetd
+        self.nixosModules.services-upower
       ];
     };
 }
