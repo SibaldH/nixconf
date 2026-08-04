@@ -23,6 +23,8 @@
         # self'.packages.nushell
         # self'.packages.tmux
         self'.packages.stremio
+        # self'.packages.steam
+        self'.packages.neovim
 
         pkgs.vlc
         pkgs.libreoffice
