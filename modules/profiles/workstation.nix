@@ -11,7 +11,8 @@
         self.nixosModules.profile-desktop
       ];
 
-      nixpkgs.config.allowUnfreePredicate = pkg:
+      nixpkgs.config.allowUnfreePredicate =
+        pkg:
         builtins.elem (lib.getName pkg) [
           "spotify"
         ];
@@ -19,12 +20,11 @@
       environment.systemPackages = [
         self'.packages.kitty
         self'.packages.yazi
-        # self'.packages.neovim
+        self'.packages.neovim
         # self'.packages.nushell
         # self'.packages.tmux
         self'.packages.stremio
         # self'.packages.steam
-        self'.packages.neovim
 
         pkgs.vlc
         pkgs.libreoffice
