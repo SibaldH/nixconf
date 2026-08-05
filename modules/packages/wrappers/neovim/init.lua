@@ -18,7 +18,9 @@ end
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
+require("config.lsp")
 
+require("plugins.treesitter")
 require("plugins.fidget")
 require("plugins.telescope")
 require("plugins.oil")

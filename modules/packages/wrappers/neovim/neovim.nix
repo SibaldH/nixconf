@@ -34,12 +34,30 @@
 
         # Tools on PATH for this neovim only
         runtimePkgs = with pkgs; [
-          nixd
-          nixfmt
-          lua-language-server
-          stylua
+          # search (already had)
           ripgrep
           fd
+
+          # Rust
+          rust-analyzer
+          # rustfmt / clippy: use rustup toolchain or:
+          # rustfmt
+          # clippy
+
+          # Nix
+          nixd          # or: nil
+          nixfmt
+
+          # Lua
+          lua-language-server
+          stylua
+
+          # HTML / CSS / JSON
+          vscode-langservers-extracted # html, css, json, eslint
+
+          # JS / TS
+          typescript-language-server
+          # prettierd  # optional formatter;
         ];
 
         # Available in lua via the generated info plugin
