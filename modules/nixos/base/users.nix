@@ -10,19 +10,17 @@
       users = {
         users.${user} = {
           isNormalUser = true;
-          shell = pkgs.nushell;
+          shell = pkgs.bash;
           extraGroups = [
             "wheel"
             "video"
             "input"
             "dialout"
             "adbusers"
-	    "ydotool"
+            "ydotool"
           ];
           initialPassword = "root";
         };
       };
-
-      # services.getty.autologinUser = user;
     };
 }
