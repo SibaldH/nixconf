@@ -12,7 +12,7 @@ vim.o.relativenumber = true
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number" -- highlight number only (less noisy); use "both" if you prefer
 vim.o.guicursor =
-  "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
 ---------------------------------------------------------------------------
 -- UI
@@ -39,19 +39,19 @@ vim.o.winblend = 0
 
 vim.opt.list = true
 vim.opt.listchars = {
-  tab = "» ",
-  trail = "·",
-  nbsp = "␣",
-  extends = "›",
-  precedes = "‹",
+	tab = "» ",
+	trail = "·",
+	nbsp = "␣",
+	extends = "›",
+	precedes = "‹",
 }
 
 vim.opt.fillchars = {
-  eob = " ", -- hide ~ at end of buffer
-  fold = " ",
-  foldopen = "▾",
-  foldclose = "▸",
-  diff = "╱",
+	eob = " ", -- hide ~ at end of buffer
+	fold = " ",
+	foldopen = "▾",
+	foldclose = "▸",
+	diff = "╱",
 }
 
 ---------------------------------------------------------------------------
@@ -115,7 +115,6 @@ vim.o.formatoptions = "jcroqlnt" -- sensible defaults; tweak as you like
 vim.opt.shortmess:append("c") -- quieter completion messages
 vim.opt.shortmess:append("I") -- no intro message
 vim.opt.iskeyword:append("-") -- treat kebab-case as one word
-
 
 ---------------------------------------------------------------------------
 -- Performance / diffs

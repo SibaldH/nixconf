@@ -36,12 +36,7 @@ map("n", "<leader>p", '"+p', { desc = "Paste from +" })
 map("n", "<leader>P", '"+P', { desc = "Paste before from +" })
 
 -- Substitute word under cursor
-map(
-  "n",
-  "S",
-  ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
-  { desc = "Substitute word under cursor" }
-)
+map("n", "S", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Substitute word under cursor" })
 
 -- Quickfix
 map("n", "<leader>ld", vim.diagnostic.setqflist, { desc = "Diagnostics → qflist" })
@@ -113,13 +108,13 @@ map("x", "<leader>y", '"+y', { desc = "Yank selection to +" })
 map("x", "<leader>d", '"_d', { desc = "Delete selection to void" })
 
 map("x", ">>", function()
-  vim.cmd("normal! >>")
-  vim.cmd("normal! gv")
+	vim.cmd("normal! >>")
+	vim.cmd("normal! gv")
 end, { desc = "Indent (keep selection)" })
 
 map("x", "<<", function()
-  vim.cmd("normal! <<")
-  vim.cmd("normal! gv")
+	vim.cmd("normal! <<")
+	vim.cmd("normal! gv")
 end, { desc = "Outdent (keep selection)" })
 
 -- Keep your old "disable Esc in insert/visual" only if you still want it.
