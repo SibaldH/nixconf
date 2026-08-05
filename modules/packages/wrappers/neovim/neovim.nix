@@ -11,16 +11,17 @@
 
         # Startup plugins
         specs.general = with pkgs.vimPlugins; [
-	  telescope-nvim
+          telescope-nvim
           plenary-nvim # telescope dependency
           telescope-fzf-native-nvim
           vim-sleuth
           nvim-treesitter.withAllGrammars
           nvim-lspconfig
-	  oil-nvim
+          oil-nvim
           fidget-nvim
           harpoon2
           mini-nvim
+          conform-nvim
         ];
 
         # Lazy until packadd / a lazy loader
@@ -45,7 +46,7 @@
           # clippy
 
           # Nix
-          nixd          # or: nil
+          nixd # or: nil
           nixfmt
 
           # Lua
