@@ -1,5 +1,48 @@
 -- mini.nvim modules (from your NVF config)
 
+--- Show harpoon marks; current file is wrapped in [].
+--- Place after "%=" and before fileinfo so it sits far right, left of fileinfo.
+local function section_harpoon(opts)
+  opts = opts or {}
+  local trunc = opts.trunc_width or 0
+  if vim.o.columns < trunc then
+    return ""
+  end
+
+  local ok, harpoon = pcall(require, "harpoon")
+  if not ok then
+    return ""
+  end
+
+  local list = harpoon:list()
+  local n = list:length()
+  if n == 0 then
+    return ""
+  end
+
+  local current = vim.fn.fnamemodify(vim.fn.expand("%:p"), ":p")
+  local parts = {}
+
+  for i = 1, n do
+    local item = list:get(i)
+    if item and item.value then
+      local path = vim.fn.fnamemodify(item.value, ":p")
+      local label = tostring(i)
+      if path == current then
+        label = "[" .. i .. "]"
+      end
+      table.insert(parts, label)
+    end
+  end
+
+  if #parts == 0 then
+    return ""
+  end
+
+  local icon = vim.g.miniicons_style == "glyph" and "󰛢 " or "H "
+  return icon .. table.concat(parts, " ")
+end
+
 require("mini.surround").setup({
   mappings = {
     add = "sa",
@@ -67,12 +110,14 @@ require("mini.statusline").setup({
       local diagnostics = MiniStatusline.section_diagnostics({ trunc_width = 75 })
       local filename = MiniStatusline.section_filename({ trunc_width = 140 })
       local fileinfo = MiniStatusline.section_fileinfo({ trunc_width = 120 })
+      local harpoon = section_harpoon({ trunc_width = 100 })
 
       return MiniStatusline.combine_groups({
         { hl = "MiniStatuslineDevinfo", strings = { git, diff, diagnostics } },
         "%<",
         { hl = "MiniStatuslineFilename", strings = { filename } },
         "%=",
+        { hl = "MiniStatuslineFilename", strings = { harpoon } },
         { hl = "MiniStatuslineFileinfo", strings = { fileinfo } },
       })
     end,
