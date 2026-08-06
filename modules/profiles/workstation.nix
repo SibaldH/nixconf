@@ -24,7 +24,7 @@
         # self'.packages.nushell
         # self'.packages.tmux
         self'.packages.stremio
-        # self'.packages.steam
+        self'.packages.lutris
 
         pkgs.vlc
         pkgs.libreoffice
