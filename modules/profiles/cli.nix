@@ -8,7 +8,7 @@
         self.nixosModules.profile-minimal
       ];
 
-	programs.ydotool.enable = true;
+      programs.ydotool.enable = true;
 
       environment.systemPackages = with pkgs; [
         ripgrep
