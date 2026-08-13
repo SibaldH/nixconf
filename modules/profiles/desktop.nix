@@ -13,6 +13,7 @@
         self.nixosModules.desktop-fonts
         self.nixosModules.desktop-niri
         self.nixosModules.desktop-xdg
+        self.nixosModules.desktop-virtualisation
 
         # services
         self.nixosModules.services-greetd
