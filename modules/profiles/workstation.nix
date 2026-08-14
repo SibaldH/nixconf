@@ -30,6 +30,7 @@
         pkgs.librewolf
         pkgs.ferdium
         pkgs.spotify
+        pkgs.freecad
       ];
     }
   );
