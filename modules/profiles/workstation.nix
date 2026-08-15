@@ -31,6 +31,7 @@
         pkgs.ferdium
         pkgs.spotify
         pkgs.freecad
+        pkgs.zotero
       ];
     }
   );
