@@ -59,6 +59,11 @@
           # JS / TS
           typescript-language-server
           # prettierd  # optional formatter;
+
+          # Typst
+          typst
+          typstyle
+          tinymist
         ];
 
         # Available in lua via the generated info plugin

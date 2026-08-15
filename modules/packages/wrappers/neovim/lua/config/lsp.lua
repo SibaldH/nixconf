@@ -41,6 +41,13 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
+vim.lsp.config("tinymist", {
+	settings = {
+		formatterMode = "typstyle",
+		exportPdf = "onSave", -- keep a PDF next to the .typ file as you save
+	},
+})
+
 -- Enable: activates for the server's filetypes
 for _, name in ipairs({
 	"rust_analyzer",
@@ -50,6 +57,7 @@ for _, name in ipairs({
 	"cssls",
 	"jsonls",
 	"ts_ls",
+	"tinymist",
 }) do
 	vim.lsp.enable(name)
 end
