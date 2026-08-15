@@ -21,7 +21,7 @@
             ];
             audio = [
               {
-                run = ''${lib.getExe self'.packages.mpv} --force-window=yes "$@"'';
+                run = ''${lib.getExe pkgs.mpv} --force-window=yes "$@"'';
                 orphan = true;
                 desc = "Play in mpv";
               }
