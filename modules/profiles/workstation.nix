@@ -23,6 +23,7 @@
         self'.packages.neovim
         self'.packages.stremio
         self'.packages.lutris
+        self'.packages.zathura
 
         pkgs.vlc
         pkgs.libreoffice
