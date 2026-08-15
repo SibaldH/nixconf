@@ -13,6 +13,7 @@
         self.nixosModules.base-users
         self.nixosModules.base-bluetooth
         self.nixosModules.base-shell
+        self.nixosModules.base-nh
 
         ## services
         self.nixosModules.services-openssh
