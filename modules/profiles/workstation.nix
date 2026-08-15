@@ -33,6 +33,7 @@
         pkgs.spotify
         pkgs.freecad
         pkgs.zotero
+        pkgs.mpv
       ];
     }
   );
