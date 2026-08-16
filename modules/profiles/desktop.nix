@@ -1,8 +1,7 @@
 { self, ... }:
-
 {
   flake.nixosModules.profile-desktop =
-    { ... }:
+    { pkgs, ... }:
     {
       imports = [
         self.nixosModules.profile-cli
@@ -12,6 +11,7 @@
 
         self.nixosModules.desktop-fonts
         self.nixosModules.desktop-niri
+        self.nixosModules.desktop-noctalia
         self.nixosModules.desktop-xdg
         self.nixosModules.desktop-virtualisation
 
@@ -20,5 +20,6 @@
         self.nixosModules.services-upower
         self.nixosModules.services-nas
       ];
+
     };
 }
