@@ -1,0 +1,280 @@
+[bar.default]
+capsule = true
+end = [ "tray", "notifications", "status", "clipboard", "volume", "brightness", "battery", "control-center" ]
+margin_edge = 10
+start = [ "launcher", "wallpaper", "workspaces", "media", "gamermode" ]
+
+[battery]
+warning_threshold = 20
+
+    [battery.device."/org/freedesktop/UPower/devices/battery_hidpp_battery_0"]
+    warning_threshold = 20
+
+[brightness]
+enable_ddcutil = true
+sync_all_monitors = true
+
+[calendar]
+enabled = true
+
+    [calendar.account.personal_proton]
+    color = "primary"
+    name = "ProtonMail"
+    server_url = "https://calendar.proton.me/api/calendar/v1/url/FAQXM65AYI0U5fA0ymJ7Y8l5LA7qi_j8k06ZVOhY-TK4Y84UGYar_LTgMVinX0QbkLNh-vHfBZuCcDHbItu0kA==/calendar.ics?CacheKey=pYzrATH29ginTVW8CvwfhA%3D%3D&PassphraseKey=zomNSLicNJYVaZCzMTVN2SjwgUF9NXgDDRV3HXM5Y2M%3D"
+    type = "ics"
+
+[control_center.calendar]
+show_week_numbers = true
+
+[desktop_widgets]
+enabled = false
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 10
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@DP-9",
+    "lockscreen-login-box@DP-10",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-10"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 946.0
+    output = "DP-10"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-10".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-9"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 942.0
+    output = "DP-9"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-9".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 720.0
+    cy = 738.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 368.0
+    box_width = 576.0
+    cx = 1296.0
+    cy = 464.0
+    output = "DP-9"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = true
+        background_opacity = 0.65000000000000002
+        background_padding = 32
+        background_radius = 21
+        clock_style = "digital"
+        color = "on_surface_variant"
+        font_family = "JetBrainsMono Nerd Font Mono"
+        format = "{:%H:%M:%S}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 368.0
+    box_width = 576.0
+    cx = 1280.0
+    cy = 464.0
+    output = "DP-10"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = true
+        background_opacity = 0.65000000000000002
+        background_padding = 32
+        background_radius = 21
+        clock_style = "digital"
+        color = "on_surface_variant"
+        font_family = "JetBrainsMono Nerd Font Mono"
+        format = "{:%H:%M:%S}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 256.0
+    box_width = 480.0
+    cx = 720.0
+    cy = 304.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = true
+        background_opacity = 0.65000000000000002
+        background_padding = 32
+        background_radius = 21
+        clock_style = "digital"
+        color = "on_surface_variant"
+        font_family = "JetBrainsMono Nerd Font Mono"
+        format = "{:%H:%M:%S}"
+
+[nightlight]
+enabled = true
+temperature_day = 5800
+temperature_night = 2600
+
+[plugin_settings."aristides/udiskie"]
+file_manager_cmd = "yazi"
+
+[plugin_settings."avivbintangaringga/nix-monitor"]
+update_command = "nh os switch"
+
+[plugin_settings."nomadcxx/gamer-mode"]
+profile = "heavy"
+
+[plugin_settings."whyoolw/dropwall"]
+copy_to_wallpaper_dir = true
+
+[plugins]
+enabled = [
+    "whyoolw/dropwall",
+    "nomadcxx/gamer-mode",
+    "avivbintangaringga/nix-monitor",
+    "lucasoe/proton-pass",
+    "cleboost/ssh-launcher",
+    "aristides/udiskie"
+]
+
+[shell]
+app_icon_color = "on_surface"
+font_family = "JetBrainsMono Nerd Font Mono"
+password_style = "random"
+polkit_agent = true
+screen_time_enabled = true
+
+    [shell.animation]
+    speed = 4.0
+
+    [shell.launcher]
+    show_app_actions = true
+
+    [shell.panel]
+    launcher_placement = "attached"
+    wallpaper_placement = "floating"
+    wallpaper_position = "center"
+
+    [shell.screen_corners]
+    enabled = true
+
+    [shell.screenshot]
+    directory = "/home/jay/Pictures/Screenshots"
+
+[theme]
+builtin = "Noctalia"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "vibrant"
+
+[wallpaper.default]
+path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
+
+[wallpaper.last]
+path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
+
+[wallpaper.monitors.DP-10]
+path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
+
+[wallpaper.monitors.DP-9]
+path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
+
+[wallpaper.monitors.eDP-1]
+path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
+
+[widget.gamermode]
+type = "nomadcxx/gamer-mode:gamermode"
+
+[widget.status]
+type = "aristides/udiskie:status"
