@@ -74,6 +74,8 @@ widget_order = [
     cx = 1280.0
     cy = 946.0
     output = "DP-10"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "login_box"
 
@@ -99,6 +101,8 @@ widget_order = [
     cx = 1280.0
     cy = 942.0
     output = "DP-9"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "login_box"
 
@@ -124,6 +128,8 @@ widget_order = [
     cx = 720.0
     cy = 738.0
     output = "eDP-1"
+    placement_height = 960.0
+    placement_width = 1440.0
     rotation = 0.0
     type = "login_box"
 
@@ -149,6 +155,8 @@ widget_order = [
     cx = 1296.0
     cy = 464.0
     output = "DP-9"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "clock"
 
@@ -168,6 +176,8 @@ widget_order = [
     cx = 1280.0
     cy = 464.0
     output = "DP-10"
+    placement_height = 1440.0
+    placement_width = 2560.0
     rotation = 0.0
     type = "clock"
 
@@ -187,6 +197,8 @@ widget_order = [
     cx = 720.0
     cy = 304.0
     output = "eDP-1"
+    placement_height = 960.0
+    placement_width = 1440.0
     rotation = 0.0
     type = "clock"
 
@@ -205,6 +217,10 @@ enabled = true
 temperature_day = 5800
 temperature_night = 2600
 
+[osd.kinds]
+keyboard_backlight = false
+media = false
+
 [plugin_settings."aristides/udiskie"]
 file_manager_cmd = "yazi"
 
@@ -218,14 +234,7 @@ profile = "heavy"
 copy_to_wallpaper_dir = true
 
 [plugins]
-enabled = [
-    "whyoolw/dropwall",
-    "nomadcxx/gamer-mode",
-    "avivbintangaringga/nix-monitor",
-    "lucasoe/proton-pass",
-    "cleboost/ssh-launcher",
-    "aristides/udiskie"
-]
+enabled = [ "nomadcxx/gamer-mode", "avivbintangaringga/nix-monitor", "lucasoe/proton-pass", "aristides/udiskie" ]
 
 [shell]
 app_icon_color = "on_surface"
@@ -255,14 +264,14 @@ screen_time_enabled = true
 builtin = "Noctalia"
 community_palette = "Oxocarbon"
 mode = "dark"
-source = "community"
+source = "wallpaper"
 wallpaper_scheme = "vibrant"
 
 [wallpaper.default]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_7je77e.jpg"
 
 [wallpaper.last]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_7je77e.jpg"
 
 [wallpaper.monitors.DP-10]
 path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
@@ -271,7 +280,7 @@ path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
 path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_7je77e.jpg"
 
 [widget.gamermode]
 type = "nomadcxx/gamer-mode:gamermode"
