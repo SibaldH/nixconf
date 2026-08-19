@@ -34,6 +34,14 @@
         pkgs.freecad
         pkgs.zotero
         pkgs.mpv
+
+        pkgs.proton-pass
+        pkgs.proton-pass-cli
+        pkgs.protonmail-desktop
+        pkgs.proton-authenticator
+
+        pkgs.qbittorrent
+        pkgs.tor-browser
       ];
     }
   );
