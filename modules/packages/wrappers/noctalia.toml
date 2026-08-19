@@ -17,17 +17,61 @@ sync_all_monitors = true
 [calendar]
 enabled = true
 
-    [calendar.account.personal_proton]
-    color = "primary"
-    name = "ProtonMail"
-    server_url = "https://calendar.proton.me/api/calendar/v1/url/FAQXM65AYI0U5fA0ymJ7Y8l5LA7qi_j8k06ZVOhY-TK4Y84UGYar_LTgMVinX0QbkLNh-vHfBZuCcDHbItu0kA==/calendar.ics?CacheKey=pYzrATH29ginTVW8CvwfhA%3D%3D&PassphraseKey=zomNSLicNJYVaZCzMTVN2SjwgUF9NXgDDRV3HXM5Y2M%3D"
-    type = "ics"
-
 [control_center.calendar]
 show_week_numbers = true
 
 [desktop_widgets]
-enabled = false
+enabled = true
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-0000000000000004", "desktop-widget-0000000000000005" ]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 288.0
+    box_width = 176.0
+    cx = 176.0
+    cy = 368.0
+    output = "eDP-1"
+    placement_height = 960.0
+    placement_width = 1440.0
+    rotation = 0.0
+    type = "media_player"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = true
+        hide_when_no_media = true
+        layout = "vertical"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 174.0
+    cy = 582.0
+    output = "eDP-1"
+    placement_height = 960.0
+    placement_width = 1440.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        bands = 32
+        color_1 = "secondary"
+        show_when_idle = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 720.0
+    cy = 480.0
+    output = "eDP-1"
+    placement_height = 960.0
+    placement_width = 1440.0
+    rotation = 0.0
+    type = "calendar"
 
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
@@ -55,6 +99,8 @@ auto_locate = true
 enabled = true
 schema_version = 2
 widget_order = [
+    "lockscreen-login-box@DP-12",
+    "lockscreen-login-box@DP-11",
     "lockscreen-login-box@DP-9",
     "lockscreen-login-box@DP-10",
     "lockscreen-login-box@eDP-1",
@@ -93,6 +139,60 @@ widget_order = [
         show_media = true
         show_session_buttons = true
         show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-11"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1258.0
+    output = "DP-11"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-11".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-12"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1258.0
+    output = "DP-12"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-12".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
         show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-9"]
@@ -268,10 +368,10 @@ source = "wallpaper"
 wallpaper_scheme = "vibrant"
 
 [wallpaper.default]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_7je77e.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_4xgjlo.jpg"
 
 [wallpaper.last]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_7je77e.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_4xgjlo.jpg"
 
 [wallpaper.monitors.DP-10]
 path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
@@ -280,7 +380,7 @@ path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
 path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_7je77e.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_4xgjlo.jpg"
 
 [widget.gamermode]
 type = "nomadcxx/gamer-mode:gamermode"
