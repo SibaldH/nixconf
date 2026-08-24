@@ -20,6 +20,7 @@
         self.nixosModules.services-upower
         self.nixosModules.services-nas
         self.nixosModules.services-udisk2
+        self.nixosModules.services-printing
       ];
 
     };
