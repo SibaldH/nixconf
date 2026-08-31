@@ -19,6 +19,9 @@
 
       users.users.${user}.extraGroups = [ "libvirtd" ];
 
-      environment.systemPackages = [ pkgs.virtio-win ]; # driver ISO for fast virtio disk/net in the guest
+      environment.systemPackages = with pkgs; [
+        virtio-win
+        virtiofsd
+      ]; # driver ISO for fast virtio disk/net in the guest
     };
 }
