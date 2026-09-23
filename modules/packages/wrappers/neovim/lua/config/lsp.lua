@@ -48,6 +48,20 @@ vim.lsp.config("tinymist", {
 	},
 })
 
+vim.lsp.config("arduino_language_server", {
+	cmd = {
+		"arduino-language-server",
+		"-cli",
+		"arduino-cli",
+		"-cli-config",
+		vim.fn.expand("~/.arduino15/arduino-cli.yaml"),
+		"-clangd",
+		"clangd",
+	},
+	filetypes = { "arduino" },
+	root_markers = { "sketch.yaml", ".git" },
+})
+
 -- Enable: activates for the server's filetypes
 for _, name in ipairs({
 	"rust_analyzer",
@@ -58,6 +72,7 @@ for _, name in ipairs({
 	"jsonls",
 	"ts_ls",
 	"tinymist",
+	"arduino_language_server",
 }) do
 	vim.lsp.enable(name)
 end

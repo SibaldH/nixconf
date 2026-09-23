@@ -35,6 +35,9 @@
         pkgs.zotero
         pkgs.mpv
 
+        pkgs.arduino-ide
+        pkgs.tio
+
         pkgs.proton-pass
         pkgs.proton-pass-cli
         pkgs.protonmail-desktop

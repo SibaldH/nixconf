@@ -64,6 +64,14 @@
           typst
           typstyle
           tinymist
+
+          # C / C++ / Arduino (.ino) — primary Arduino workflow lives here;
+          # arduino-ide (see modules/nixos/services/arduino.nix) is only a
+          # GUI backup
+          arduino-cli
+          arduino-language-server # wraps clangd for .ino files
+          clang-tools # provides clangd
+          avrdude
         ];
 
         # Available in lua via the generated info plugin
