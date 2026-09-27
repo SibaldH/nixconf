@@ -34,6 +34,7 @@
         pkgs.freecad
         pkgs.zotero
         pkgs.mpv
+        pkgs.orca-slicer
 
         pkgs.arduino-ide
         pkgs.tio
