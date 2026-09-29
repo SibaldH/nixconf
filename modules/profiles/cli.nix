@@ -6,6 +6,7 @@
     {
       imports = [
         self.nixosModules.profile-minimal
+        self.nixosModules.base-direnv
       ];
 
       programs.ydotool.enable = true;
