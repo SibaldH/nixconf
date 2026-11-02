@@ -26,15 +26,17 @@
         self'.packages.zathura
 
         pkgs.vlc
-        pkgs.libreoffice
+        # pkgs.libreoffice
+        pkgs.onlyoffice-desktopeditors
         pkgs.signal-desktop
         pkgs.librewolf
         pkgs.ferdium
         pkgs.spotify
         pkgs.freecad
-        pkgs.zotero
+        # pkgs.zotero
         pkgs.mpv
         pkgs.orca-slicer
+        pkgs.mixxx
 
         pkgs.arduino-ide
         pkgs.tio
