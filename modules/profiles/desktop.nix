@@ -17,6 +17,7 @@
 
         # services
         self.nixosModules.services-greetd
+        self.nixosModules.services-pam
         self.nixosModules.services-upower
         self.nixosModules.services-nas
         self.nixosModules.services-udisk2

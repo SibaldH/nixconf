@@ -7,6 +7,7 @@
       imports = [
         self.nixosModules.profile-minimal
         self.nixosModules.base-direnv
+        self.nixosModules.services-yubikey
       ];
 
       programs.ydotool.enable = true;
