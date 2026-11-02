@@ -1,11 +1,23 @@
 [bar.default]
 capsule = true
-end = [ "tray", "notifications", "status", "clipboard", "volume", "brightness", "battery", "control-center" ]
+end = [
+    "tray",
+    "notifications",
+    "status",
+    "printer",
+    "clipboard",
+    "volume",
+    "brightness",
+    "battery",
+    "badge",
+    "bar",
+    "control-center"
+]
 margin_edge = 10
-start = [ "launcher", "wallpaper", "workspaces", "media", "gamermode" ]
+start = [ "launcher", "wallpaper", "workspaces", "media", "gamermode", "status_2" ]
 
 [battery]
-warning_threshold = 20
+warning_threshold = 0
 
     [battery.device."/org/freedesktop/UPower/devices/battery_hidpp_battery_0"]
     warning_threshold = 20
@@ -99,6 +111,8 @@ auto_locate = true
 enabled = true
 schema_version = 2
 widget_order = [
+    "lockscreen-login-box@DP-2",
+    "lockscreen-login-box@DP-1",
     "lockscreen-login-box@DP-12",
     "lockscreen-login-box@DP-11",
     "lockscreen-login-box@DP-9",
@@ -113,6 +127,33 @@ widget_order = [
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 989.00006103515625
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@DP-10"]
     box_height = 196.0
@@ -180,6 +221,33 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-12".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1258.0
+    output = "DP-2"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
         background_color = "surface_variant"
         background_opacity = 0.88
         background_radius = 12.0
@@ -321,11 +389,18 @@ temperature_night = 2600
 keyboard_backlight = false
 media = false
 
+[plugin_settings."ahmedhossamdev/sticky-notes"]
+use_wallpaper_colors = true
+
 [plugin_settings."aristides/udiskie"]
 file_manager_cmd = "yazi"
 
 [plugin_settings."avivbintangaringga/nix-monitor"]
 update_command = "nh os switch"
+
+[plugin_settings."nilsonlinux/rss-notifier"]
+feeds = [ "https://orion.hogent.be/d2l/le/news/rss/20596/course?token=a2vigsngao6r0r4c97f&ou=20596" ]
+refresh_minutes = 10
 
 [plugin_settings."nomadcxx/gamer-mode"]
 profile = "heavy"
@@ -334,7 +409,19 @@ profile = "heavy"
 copy_to_wallpaper_dir = true
 
 [plugins]
-enabled = [ "nomadcxx/gamer-mode", "avivbintangaringga/nix-monitor", "lucasoe/proton-pass", "aristides/udiskie" ]
+enabled = [
+    "nomadcxx/gamer-mode",
+    "avivbintangaringga/nix-monitor",
+    "lucasoe/proton-pass",
+    "aristides/udiskie",
+    "h-jangra/keyviz",
+    "knyrps/nix-search",
+    "andrewdems/printers",
+    "abuamar142/qr-share",
+    "nilsonlinux/rss-notifier",
+    "ahmedhossamdev/sticky-notes",
+    "tiobaka/vm-manager"
+]
 
 [shell]
 app_icon_color = "on_surface"
@@ -368,10 +455,10 @@ source = "wallpaper"
 wallpaper_scheme = "vibrant"
 
 [wallpaper.default]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_4xgjlo.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_6q3llx.jpg"
 
 [wallpaper.last]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_4xgjlo.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_6q3llx.jpg"
 
 [wallpaper.monitors.DP-10]
 path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
@@ -380,10 +467,22 @@ path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
 path = "/home/jay/Pictures/Wallpapers/wallhaven_4vyw3l.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/jay/Pictures/Wallpapers/wallhaven_4xgjlo.jpg"
+path = "/home/jay/Pictures/Wallpapers/wallhaven_6q3llx.jpg"
+
+[widget.badge]
+type = "nilsonlinux/rss-notifier:badge"
+
+[widget.bar]
+type = "ahmedhossamdev/sticky-notes:bar"
 
 [widget.gamermode]
 type = "nomadcxx/gamer-mode:gamermode"
 
+[widget.printer]
+type = "andrewdems/printers:printer"
+
 [widget.status]
 type = "aristides/udiskie:status"
+
+[widget.status_2]
+type = "tiobaka/vm-manager:status"
