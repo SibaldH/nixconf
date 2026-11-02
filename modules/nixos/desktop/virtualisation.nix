@@ -22,6 +22,7 @@
       environment.systemPackages = with pkgs; [
         virtio-win
         virtiofsd
+        virt-viewer
       ]; # driver ISO for fast virtio disk/net in the guest
     };
 }
