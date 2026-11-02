@@ -16,7 +16,5 @@
           user = "${user}";
         };
       };
-
-      security.pam.services.greetd.enableGnomeKeyring = true;
     };
 }
