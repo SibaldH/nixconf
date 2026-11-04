@@ -37,6 +37,7 @@
         pkgs.mpv
         pkgs.orca-slicer
         pkgs.mixxx
+        pkgs.kicad
 
         pkgs.arduino-ide
         pkgs.tio
