@@ -38,7 +38,12 @@
         auto-optimise-store = true;
       };
 
-      nixpkgs.config.allowUnfree = true;
+      nixpkgs.config = {
+        allowUnfree = true;
+        problems.handlers = {
+          "gtk+".broken = "warn";
+        };
+      };
       system.stateVersion = "26.05";
     };
 }

@@ -5,12 +5,17 @@
     let
       pkgs = import inputs.nixpkgs {
         inherit system;
-        config.allowUnfreePredicate =
-          pkg:
-          builtins.elem (inputs.nixpkgs.lib.getName pkg) [
-            "steam"
-            "steam-unwrapped"
-          ];
+        config = {
+          allowUnfreePredicate =
+            pkg:
+            builtins.elem (inputs.nixpkgs.lib.getName pkg) [
+              "steam"
+              "steam-unwrapped"
+            ];
+          problems.handlers = {
+            "gtk+".broken = "warn"; # or "ignore"
+          };
+        };
       };
     in
 
