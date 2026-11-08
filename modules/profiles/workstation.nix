@@ -24,6 +24,7 @@
         self'.packages.stremio
         self'.packages.lutris
         self'.packages.zathura
+        self'.packages.kicad
 
         pkgs.vlc
         # pkgs.libreoffice
@@ -37,7 +38,6 @@
         pkgs.mpv
         pkgs.orca-slicer
         pkgs.mixxx
-        pkgs.kicad
 
         pkgs.arduino-ide
         pkgs.tio
